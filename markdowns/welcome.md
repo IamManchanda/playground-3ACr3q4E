@@ -1,6 +1,6 @@
 # Part 3 - Here comes ECSS, Long Live ECSS!
 
-In the previous article, I covered about **CSSinJS** and **separation of concerns** is not taken care of. This last but not the least part will cover the new Rockstar in the mix. Being both Sass/CSS and JavaScript Developer, I can only tell you this is best approach according to me so what are you waiting for Christmas? Still 50 days to go. Let’s not wait and cover ECSS right now! 
+In the [previous](https://tech.io/playgrounds/9923/the-state-of-css-specificity-part-2) article, I covered about **CSSinJS** and **separation of concerns** is not taken care of. This last but not the least part will cover the new Rockstar in the mix. Being both Sass/CSS and JavaScript Developer, I can only tell you this is best approach according to me so what are you waiting for Christmas? Still 50 days to go. Let’s not wait and cover ECSS right now! 
 
 ECSS is a methodology for writing stylesheets especially for large scale long-lived web projects that are rapidly changing day by day. You can quickly Isolate and contain styles, so modules become self-quarantining. But hey did I said above Isolating CSS is bad and you should look for Visual consistency, right? Yes but hey if you are just using CSS, that Visually consistency remains intact, and you can control what to Isolate and what to not. Thanks to isolation, it helps the designers/developers to gain maintainability with each visual pattern. With ECSS, the class names can communicate context, and initiate the logic and variation.
 
