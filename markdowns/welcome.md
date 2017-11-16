@@ -42,7 +42,7 @@ Ben Frain, the author of this methodology always wanted to negate the issues tha
 
 **Changes** to components are handled through simple overrides. So, the way they are handled from an authoring perspective makes them easy to manage and reasoned out to the public. Suppose you have an element that needs to be a different width if it is within a certain container. The best way to do this in Sass would be:
 
-```postcss
+```scss
 .enr-Card_Section { 
     width: 100%;    
     .cat-Sidebar & {
@@ -53,7 +53,7 @@ Ben Frain, the author of this methodology always wanted to negate the issues tha
 
 And it would output this CSS below:
 
-```postcss
+```scss
 .my-Module_Component {
   width: 100%;
 }
@@ -71,7 +71,7 @@ This may seem like a subtle benefit. After all, we may be authoring things a lit
 
 But, when there are events that are beyond our control mess with our styles from a 3rd party CSS file loaded on the page and we need some clout, we can and should be embracing `!important`. Here's an example of a state change:
 
-```postcss
+```scss
 [aria-expanded="true"] & {
     transform: translate3d(0, -$super-height, 0)!important;
 }
@@ -81,7 +81,7 @@ But, when there are events that are beyond our control mess with our styles from
 
 The ECSS approach embraces repetition in the properties and values of the CSS. With ECSS, every single visual module or component is written with a micro-namespace to provide isolation from other modules and components. Things like `color` and `font-size` are declared in most components. The `@include headline` mixin generates a sizeable chunk of CSS to designate a particular font stack too. Yes! there's repetition across styles. Here is an example with Sass:
 
-```postcss
+```scss
 .my-SubHeader_Wrapper {
   @include headline;
   align-items: center;
@@ -202,7 +202,7 @@ A state is something that extends and overrides all other styles. For example, a
 
 **How ECSS used to handle state change:** Historically, ECSS followed the SMACSS approach of communicating state like examples below:
 
-```postcss
+```scss
 .has-MiniCartActive {}
 .is-ShowingValue {}
 
@@ -230,7 +230,7 @@ button.setAttribute("aria-selected", "true");
 
 In our CSS syntax, writing that change within a single set of braces (Sass) would be like this:
 
-```postcss
+```scss
 .my-Button {
   background-color: $color-button-passive;
   &[aria-selected="true"] {
@@ -241,7 +241,7 @@ In our CSS syntax, writing that change within a single set of braces (Sass) woul
 
 That being said, the [CSS Selectors Level 4 specification](http://dev.w3.org/csswg/selectors-4/#attribute-case) makes provision for case insensitivity by using a `i` flag before the closing square bracket. This look something like this: 
 
-```postcss
+```scss
 .co-Button {
    background-color: $color-button-passive;
    &[aria-selected="true" i] {
